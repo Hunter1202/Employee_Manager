@@ -19,19 +19,23 @@ public class Main {
                 case "3" -> employeeManager.addIntern();
                 case "4" -> {
                     employeeID = employeeManager.inputID();
-                    employeeManager.edit(employeeID);
+                    employeeManager.find(employeeID);
                 }
                 case "5" -> {
                     employeeID = employeeManager.inputID();
-                    employeeManager.delete(employeeID);
+                    employeeManager.edit(employeeID);
                 }
                 case "6" -> {
                     employeeID = employeeManager.inputID();
+                    employeeManager.delete(employeeID);
+                }
+                case "7" -> {
+                    employeeID = employeeManager.inputID();
                     employeeManager.addCert(employeeID);
                 }
-                case "7" -> employeeManager.showInfo();
-                case "8" -> employeeManager.showCert();
-                case "0" -> {
+                case "8" -> employeeManager.showInfo();
+                case "9" -> employeeManager.showCert();
+                 case "0" -> {
                     System.out.println("Kết thúc!");
                     exit = true;
                 }
@@ -52,13 +56,36 @@ public class Main {
         System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 1. Thêm Expert.\t\t\t\t\t\t\t\t\t\t\t*");
         System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 2. Thêm Fresher.\t\t\t\t\t\t\t\t\t\t*");
         System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 3. Thêm Intern.\t\t\t\t\t\t\t\t\t\t\t*");
-        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 4. Chỉnh sửa nhân viên qua ID.\t\t\t\t\t\t\t*");
-        System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 5. Xóa nhân viên qua ID.\t\t\t\t\t\t\t\t\t*");
-        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 6. Thêm bằng cấp qua ID.\t\t\t\t\t\t\t\t*");
-        System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 7. Hiện nhân viên.\t\t\t\t\t\t\t\t\t\t\t*");
-        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 8. Hiện bằng cấp.\t\t\t\t\t\t\t\t\t\t*");
-        System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 0. Đóng.\t\t\t\t\t\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 4. Tìm nhân viên qua ID.\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 5. Chỉnh sửa nhân viên qua ID.\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 6. Xóa nhân viên qua ID.\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 7. Thêm bằng cấp qua ID.\t\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 8. Hiện nhân viên.\t\t\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t\t 9. Hiện bằng cấp.\t\t\t\t\t\t\t\t\t\t\t*");
+        System.out.println("\t\t\t\t\t\t\t*\t\t\t\t\t\t\t\t\t 0. Đóng.\t\t\t\t\t\t\t\t\t\t\t\t*");
         System.out.println("\t\t\t\t\t\t\t============================================================================================");
         System.out.print("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPlease choose: ");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

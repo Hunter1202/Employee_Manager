@@ -13,13 +13,13 @@ public class EmployeeManager {
     }
 
     //Getter & Setter
-    public List<Employee> getEmployeeList() {
-        return employeeList;
-    }
 
-    public EmployeeDao getEmployeeDao() {
-        return employeeDao;
-    }
+//    public EmployeeDao getEmployeeDao() {
+//        return employeeDao;
+//    }    public List<Employee> getEmployeeList() {
+//        return employeeList;
+//    }
+
 
     //Thêm và showInfo() các thuộc tính đặc trưng nhân viên kinh nghiệm lâu năm (ExpInYear, ProSkill)
     public void addExpert() {
@@ -95,6 +95,31 @@ public class EmployeeManager {
             employeeDao.write(employeeList);
         }
     }
+    public void find(int id) {
+        boolean isExisted = false;
+        for (Employee employee : employeeList) {
+            if (employee.getId() == id) {
+                isExisted = true;
+                System.out.print("\n");
+                System.out.format("\t\t%20s | ", employee.getFullName());
+                System.out.format("\t\t%20s | ", employee.getBirthDay());
+                System.out.format("\t\t%20s | ", employee.getPhone());
+                System.out.format("\t\t%20s | ", employee.getEmail());
+                System.out.print("\n\n");
+                System.out.format("\t\t%20s | ", employee.getCertificatedID());
+                System.out.format("\t\t%20s | ", employee.getCertificateName());
+                System.out.format("\t\t%20s | ", employee.getCertificateRank());
+                System.out.format("\t\t%20s | ", employee.getCertificatedDate());
+                System.out.print("\n\n");
+                break;
+            }
+        }
+        if (!isExisted) {
+            System.out.printf("id: %d không tồn tại.\n", id);
+        } else {
+            employeeDao.write(employeeList);
+        }
+    }
     //Hàm xóa nhân viên qua ID
     public void delete(int id) {
         Employee a = null;
@@ -152,6 +177,11 @@ public class EmployeeManager {
             System.out.format("\t\t%20s | ", a.getBirthDay());
             System.out.format("\t\t%20s | ", a.getPhone());
             System.out.format("\t\t%20s | ", a.getEmail());
+            System.out.print("\n\n");
+            System.out.format("\t\t%20s | ", a.getCertificatedID());
+            System.out.format("\t\t%20s | ", a.getCertificateName());
+            System.out.format("\t\t%20s | ", a.getCertificateRank());
+            System.out.format("\t\t%20s | ", a.getCertificatedDate());
             System.out.print("\n\n");
         }
     }
